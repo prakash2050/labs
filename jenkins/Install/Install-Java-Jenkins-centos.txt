@@ -20,6 +20,13 @@ Install Maven  ( on Jenkins machine )
 	cd /tmp ; wget https://www-eu.apache.org/dist/maven/maven-3/3.6.1/binaries/apache-maven-3.6.1-bin.tar.gz
 	cd /tmp ; tar xzvf apache-maven-3.6.1-bin.tar.gz -C /opt
 
+Install Maven in linux ------Prakash
+
+sudo wget http://repos.fedorapeople.org/repos/dchen/apache-maven/epel-apache-maven.repo -O /etc/yum.repos.d/epel-apache-maven.repo
+sudo sed -i s/\$releasever/6/g /etc/yum.repos.d/epel-apache-maven.repo
+sudo yum install -y apache-maven
+mvn –-version
+
 Set JAVA_HOME & MAVEN_HOME as environment variables on Jenkins machine
 
 	vi /etc/profile
